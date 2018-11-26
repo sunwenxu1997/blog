@@ -1,0 +1,43 @@
+// 基础配色
+$white: #fefdff;
+$black: rgb(49, 48, 48);
+
+// 系统配色
+$title: #2c3e50;
+$word: #4b4a4a;
+$base: rgb(135, 135, 245);
+$cover:#D2D1F9;
+$quote: #99c24d;
+$special: #c1bfb5;
+$background: #ebeff5;
+
+@mixin chosen-item {
+    border-bottom: 2px solid rgb(168, 168, 243);
+}
+
+@mixin flex($flow: row wrap, $justify: center, $align: center) {
+    display: flex;
+    flex-flow: $flow;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin fix($left: 0px, $top: 0px) {
+    position: fixed;
+    left: $left;
+    top: $top;
+}
+
+@mixin clear-fix($element) {
+    #{$element}:before,
+    #{$element}:after {
+        content: "";
+        display: table;
+    }
+    #{$element}:after {
+        clear: both;
+    }
+    #{$element} {
+        *zoom: 1;
+    }
+}
